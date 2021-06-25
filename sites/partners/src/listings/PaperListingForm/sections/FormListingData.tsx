@@ -41,8 +41,8 @@ const FormListingData = () => {
           <Field
             id="property.developer"
             name="property.developer"
-            label={t("listings.property.developer")}
-            placeholder={t("listings.property.developer")}
+            label={t("listings.developer")}
+            placeholder={t("listings.developer")}
             register={register}
           />
           <Field

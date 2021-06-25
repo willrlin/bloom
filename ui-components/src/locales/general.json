@@ -850,6 +850,8 @@
       "additionalFeesSubtitle": "Tell us about any other fees required by the applicant.",
       "additionalInformationSubtitle": "Required documents and selection criteria",
       "additionalInformationTitle": "Additional Information",
+      "applicationAddressTitle": "Application Address",
+      "applicationAddressSubtitle": "In the event of paper applications, where do you want applications dropped off or mailed?",
       "costsNotIncluded": "Costs Not Included",
       "eligibilitySubtitle": "Income, occupancy, preferences, and subsidies",
       "eligibilityTitle": "Eligibility",
