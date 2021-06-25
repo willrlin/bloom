@@ -23,6 +23,7 @@ import DetailAdditionalDetails from "../../../src/listings/PaperListingDetails/s
 import DetailAdditionalEligibility from "../../../src/listings/PaperListingDetails/sections/DetailAdditionalEligibility"
 import DetailLeasingAgent from "../../../src/listings/PaperListingDetails/sections/DetailLeasingAgent"
 import DetailAdditionalFees from "../../../src/listings/PaperListingDetails/sections/DetailAdditionalFees"
+import DetailRankingsAndResults from "../../../src/listings/PaperListingDetails/sections/DetailRankingsAndResults"
 
 export default function ApplicationsList() {
   const router = useRouter()
@@ -107,6 +108,7 @@ export default function ApplicationsList() {
                 <DetailAdditionalFees />
                 <DetailAdditionalEligibility />
                 <DetailAdditionalDetails />
+                <DetailRankingsAndResults />
                 <DetailLeasingAgent />
               </div>
 
