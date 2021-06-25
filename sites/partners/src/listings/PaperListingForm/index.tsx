@@ -26,6 +26,7 @@ import AdditionalDetails from "./sections/AdditionalDetails"
 import AdditionalEligibility from "./sections/AdditionalEligibility"
 import LeasingAgent from "./sections/LeasingAgent"
 import AdditionalFees from "./sections/AdditionalFees"
+import ApplicationAddress from "./sections/ApplicationAddress"
 
 type FormListing = ListingCreate & ListingUpdate
 
@@ -219,6 +220,7 @@ const ListingForm = ({ listing, editMode }: ListingFormProps) => {
                     <AdditionalEligibility />
                     <AdditionalDetails />
                     <LeasingAgent />
+                    <ApplicationAddress />
                   </div>
 
                   <aside className="md:w-3/12 md:pl-6">

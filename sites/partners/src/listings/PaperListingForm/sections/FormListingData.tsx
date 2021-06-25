@@ -22,7 +22,7 @@ const FormListingData = () => {
         </GridSection>
         <GridSection grid={false} separator>
           <FormAddress
-            subtitle={t("listings.property.buildingAddress")}
+            subtitle={t("listings.buildingAddress")}
             dataKey="property.buildingAddress"
             type="mailing"
             register={register}
