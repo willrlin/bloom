@@ -1434,6 +1434,110 @@ export class UnitsService {
   }
 }
 
+export class UnitTypesService {
+  /**
+   * List unitTypes
+   */
+  list(options: IRequestOptions = {}): Promise<UnitType[]> {
+    return new Promise((resolve, reject) => {
+      let url = basePath + '/unitTypes';
+
+      const configs: IRequestConfig = getConfigs('get', 'application/json', url, options);
+
+      let data = null;
+
+      configs.data = data;
+      axios(configs, resolve, reject);
+    });
+  }
+  /**
+   * Create unitType
+   */
+  create(
+    params: {
+      /** requestBody */
+      body?: UnitTypeCreate;
+    } = {} as any,
+    options: IRequestOptions = {}
+  ): Promise<UnitType> {
+    return new Promise((resolve, reject) => {
+      let url = basePath + '/unitTypes';
+
+      const configs: IRequestConfig = getConfigs('post', 'application/json', url, options);
+
+      let data = params.body;
+
+      configs.data = data;
+      axios(configs, resolve, reject);
+    });
+  }
+  /**
+   * Update unitType
+   */
+  update(
+    params: {
+      /** requestBody */
+      body?: UnitTypeUpdate;
+    } = {} as any,
+    options: IRequestOptions = {}
+  ): Promise<UnitType> {
+    return new Promise((resolve, reject) => {
+      let url = basePath + '/unitTypes/{unitTypeId}';
+
+      const configs: IRequestConfig = getConfigs('put', 'application/json', url, options);
+
+      let data = params.body;
+
+      configs.data = data;
+      axios(configs, resolve, reject);
+    });
+  }
+  /**
+   * Get unitType by id
+   */
+  retrieve(
+    params: {
+      /**  */
+      unitTypeId: string;
+    } = {} as any,
+    options: IRequestOptions = {}
+  ): Promise<UnitType> {
+    return new Promise((resolve, reject) => {
+      let url = basePath + '/unitTypes/{unitTypeId}';
+      url = url.replace('{unitTypeId}', params['unitTypeId'] + '');
+
+      const configs: IRequestConfig = getConfigs('get', 'application/json', url, options);
+
+      let data = null;
+
+      configs.data = data;
+      axios(configs, resolve, reject);
+    });
+  }
+  /**
+   * Delete unitType by id
+   */
+  delete(
+    params: {
+      /**  */
+      unitTypeId: string;
+    } = {} as any,
+    options: IRequestOptions = {}
+  ): Promise<any> {
+    return new Promise((resolve, reject) => {
+      let url = basePath + '/unitTypes/{unitTypeId}';
+      url = url.replace('{unitTypeId}', params['unitTypeId'] + '');
+
+      const configs: IRequestConfig = getConfigs('delete', 'application/json', url, options);
+
+      let data = null;
+
+      configs.data = data;
+      axios(configs, resolve, reject);
+    });
+  }
+}
+
 export class UserService {
   /**
    *
@@ -3035,6 +3139,15 @@ export interface Unit {
   amiChart: CombinedAmiChartTypes;
 
   /**  */
+  unitTypeRef?: Id;
+
+  /**  */
+  unitRentType?: Id;
+
+  /**  */
+  unitAccessibilityPriorityType?: Id;
+
+  /**  */
   id: string;
 
   /**  */
@@ -3435,6 +3548,15 @@ export interface UnitCreate {
 
   /**  */
   bmrProgramChart?: boolean;
+
+  /**  */
+  unitTypeRef?: Id;
+
+  /**  */
+  unitRentType?: Id;
+
+  /**  */
+  unitAccessibilityPriorityType?: Id;
 }
 
 export interface ListingCreate {
@@ -3728,6 +3850,15 @@ export interface UnitUpdate {
 
   /**  */
   bmrProgramChart?: boolean;
+
+  /**  */
+  unitTypeRef?: Id;
+
+  /**  */
+  unitRentType?: Id;
+
+  /**  */
+  unitAccessibilityPriorityType?: Id;
 
   /**  */
   id: string;
@@ -4199,6 +4330,33 @@ export interface TranslationUpdate {
 
   /**  */
   translations: object;
+}
+
+export interface UnitType {
+  /**  */
+  id: string;
+
+  /**  */
+  createdAt: Date;
+
+  /**  */
+  updatedAt: Date;
+
+  /**  */
+  name: string;
+}
+
+export interface UnitTypeCreate {
+  /**  */
+  name: string;
+}
+
+export interface UnitTypeUpdate {
+  /**  */
+  name: string;
+
+  /**  */
+  id: string;
 }
 
 export interface User {
